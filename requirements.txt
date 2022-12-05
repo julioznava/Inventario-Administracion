@@ -1,0 +1,7 @@
+django
+pillow
+django-admin-interface
+django-crispy-forms
+psycopg2
+mysqlclient
+gunicorn

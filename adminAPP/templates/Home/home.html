@@ -1,0 +1,62 @@
+{% include 'Home/../base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="col-md-12 text-center">
+
+
+        <div class="card, card-body"style="background-color: #7308EC;">
+            <br>
+            <h3 style="text-align: center; font-size: 80px; color: aliceblue; margin: 5%; padding: 5px" >Bienvenidos a nuestra APP!</h3>
+            <br>
+        </div>
+        <br>
+              <ul>
+                <a class="btn btn-lg" style="align-content: center; background-color: #F11255; color: aliceblue" href="{% url 'login' %}">Acceso privado </a>
+            </ul>
+    </div>
+
+<section class="containe" style="position: relative; top: 545px;" >
+      <!-- Footer -->
+      <footer class="text-center text-white" style="background-color: #7308EC;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: CTA -->
+          <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">Hecho con  💪 y ❤ por: Caroline, Ricardo Arros, Jean Plaza, Julio Navarro. </span>
+            </p>
+          </section>
+          <!-- Section: CTA -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <a class="text-white" href="https://www.inacap.cl/">INACAP SANTIAGO SUR @ 2022</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </section>
+    <!--FIN  FOOTER-->
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% include 'Home/../base2.html' %}
+<br>
+    <div class="card text-center table-responsive">
+        <div class="card-body">
+            <h2>Listado de vehiculos</h2>
+            <br>
+                <td><a href="{% url 'ingresar_reg_vehiculo' %}" class="btn btn-lg" style="background-color: #d63384; color: aliceblue">Ingresar vehiculo</a></td>
+            </div>
+
+                <br>
+                <div class="row align-center">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-" type="search" placeholder="Search" aria-label="Search" name="buscar">
+                        </form>
+                    </div>
+                    <table class="table table-striped table-hover text-center">
+                            <tr class="align-content-center">
+                                <th>Codigo</th>
+                                <th>Tipo</th>
+                                <th>Patente</th>
+                                <th>Numero de chasis</th>
+                                 <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Ultima revision</th>
+                                <th>Proxima revision</th>
+                                <th>Observaciones</th>
+
+
+                            </tr>
+                                {% for l in listar %}
+                            <tr>
+                                <td>{{ l.Codigo }}</td>
+                                <td>{{ l.Tipo }}</td>
+                                <td>{{ l.Patente }}</td>
+                                <td>{{ l.Numero_de_chasis }}</td>
+                                <td>{{ l.Marca }}</td>
+                                <td>{{ l.Modelo }}</td>
+                                <td>{{ l.Ultima_revision }}</td>
+                                <td>{{ l.Proxima_revision }}</td>
+                                <td>{{ l.Observaciones }}</td>
+                                <td><a class="btn btn-lg btn-success" href="{% url 'modificar_reg_vehiculo' l.id %}">Modificar</a>
+                                     &nbsp;
+                                    <a class="btn btn-danger btn-lg" href="{% url 'eliminar_reg_vehiculo' l.id %}">Eliminar</a>
+                                </td>
+
+
+                            </tr>
+                                {% endfor %}
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>

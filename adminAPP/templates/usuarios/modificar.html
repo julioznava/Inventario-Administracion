@@ -1,0 +1,33 @@
+{% include 'Home/../base2.html' %}
+{% load crispy_forms_tags %}
+
+<style>
+    body {
+        background-color: #6441A0;
+    }
+</style>
+<div class="container py-4">
+        <div class="row justify-content-center py-4">
+            <h5 class="row col-sm-12 col-md-6 col-md-5 justify-content-center display-6 py-md-4 shadow" style="color: white; background-color: #7308EC; border-radius: 0px">Modificacion de usuarios</h5>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body shadow">
+                        <form action="" method="post" autocomplete="on"">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <br>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-lg btn-secondary" type="submit" id="btnenviar">Volver</button>
+                                &nbsp;
+                                <button class="btn btn-lg" type="submit" id="btnenviar" style="background-color: #d63384; color: white">Enviar</button>
+                            </div>
+                        </form>
+                        {{ mensaje }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
