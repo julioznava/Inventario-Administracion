@@ -317,12 +317,12 @@ class InsumoComputacionViewset(viewsets.ModelViewSet):
     serializer_class = InsumoComputacionSerializer
 
 class InsmoOficinaViewset(viewsets.ModelViewSet):
-    queryset = InsumoComputacion.objects.all()
-    serializer_class = InsumoComputacionSerializer
+    queryset = InsmoOficina.objects.all()
+    serializer_class = InsmoOficinaSerializer
 
 class RegistroVehiculoViewset(viewsets.ModelViewSet):
-    queryset = InsumoComputacion.objects.all()
-    serializer_class = InsumoComputacionSerializer
+    queryset = RegistroVehiculo.objects.all()
+    serializer_class = RegistroVehiculoSerializer
 
 
 
