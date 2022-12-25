@@ -2,7 +2,7 @@ from django.urls import path, include
 from adminAPP.views import *
 from rest_framework import  routers
 
-#rutas Serializador
+#rutas Serializadoras
 
 router = routers.DefaultRouter()
 router.register('insumos-computacionales', InsumoComputacionViewset)
