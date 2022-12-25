@@ -1,5 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from adminAPP.views import *
+from rest_framework import  routers
+
+#rutas Serializador
+
+router = routers.DefaultRouter()
+router.register('insumos-computacionales', InsumoComputacionViewset)
+router.register('insumos-oficina', InsumoComputacionViewset)
+router.register('registro-vehiculos', InsumoComputacionViewset)
+
 
 urlpatterns = [
     # HOME
@@ -32,4 +41,8 @@ urlpatterns = [
     path('listar_usuario/', listar_usuario, name="listar_usuario"),
     path('modificar_usuario/<id>/', modificar_usuario, name='modificar_usuario'),
     path('eliminar_usuario/<id>/', eliminar_usuario, name='eliminar_usuario'),
+
+    # PATH para la API
+
+    path('api/', include(router.urls))
 ]

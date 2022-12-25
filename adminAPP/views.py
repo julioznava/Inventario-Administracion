@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
 import adminAPP.views
 from .models import *
 from .forms import *
@@ -7,6 +6,11 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
+# serializadores librerias
+from rest_framework import viewsets
+from .serializers import *
+
+
 
 # HOME
 
@@ -306,8 +310,19 @@ def eliminar_usuario(request, id):
 
 
 
+# CLASES VISTAS SERIALIZADORES
 
+class InsumoComputacionViewset(viewsets.ModelViewSet):
+    queryset = InsumoComputacion.objects.all()
+    serializer_class = InsumoComputacionSerializer
 
+class InsmoOficinaViewset(viewsets.ModelViewSet):
+    queryset = InsumoComputacion.objects.all()
+    serializer_class = InsumoComputacionSerializer
+
+class RegistroVehiculoViewset(viewsets.ModelViewSet):
+    queryset = InsumoComputacion.objects.all()
+    serializer_class = InsumoComputacionSerializer
 
 
 

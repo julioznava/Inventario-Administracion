@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,8 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'adminAPP',
     'crispy_forms',
+    'crispy_bootstrap5',
+    'colorfield',
+    'cloudinary',
+    'rest_framework',
 ]
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 
 MIDDLEWARE = [
@@ -80,14 +89,20 @@ WSGI_APPLICATION = 'appadministracion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'APPADMINISTRACION',
+#         'USER': 'recismart',
+#         'PASSWORD': 'sqlserver.2022',
+#         'HOST': 'mysqlrecismart.mysql.database.azure.com',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'APPADMINISTRACION',
-        'USER': 'recismart',
-        'PASSWORD': 'sqlserver.2022',
-        'HOST': 'mysqlrecismart.mysql.database.azure.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -129,12 +144,20 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-import os
+# import os
+#
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+cloudinary.config(
+  cloud_name = "dwks69ifj",
+  api_key = "224344749295745",
+  api_secret = "oC7ytqku4GWOgyHqH3nT6NfoKJs",
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# CSRF_TRUSTED_ORIGINS = []
