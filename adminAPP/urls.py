@@ -6,8 +6,8 @@ from rest_framework import  routers
 
 router = routers.DefaultRouter()
 router.register('insumos-computacionales', InsumoComputacionViewset)
-router.register('insumos-oficina', InsumoComputacionViewset)
-router.register('registro-vehiculos', InsumoComputacionViewset)
+router.register('insumos-oficina', InsmoOficinaViewset)
+router.register('registro-vehiculos', RegistroVehiculoViewset)
 
 
 urlpatterns = [
