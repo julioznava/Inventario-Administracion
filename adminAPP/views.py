@@ -357,14 +357,11 @@ def api_regvehiculos(request):
     return render(request, './reg_vehiculos/mostrarapi.html', context)
 
 
-
-
-
-def apisite(request):
-    return render(request, 'https://inventario-administracion-production.up.railway.app/api/')
-
-
-
+# def apisite(request):
+#     return render(request, 'https://inventario-administracion-production.up.railway.app/api/')
+#
+#
+#
 
 
 
