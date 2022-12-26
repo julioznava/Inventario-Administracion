@@ -13,3 +13,4 @@ tzdata
 wheel
 cloudinary
 django-rest-framework
+requests

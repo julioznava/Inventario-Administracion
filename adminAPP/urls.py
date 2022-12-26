@@ -23,6 +23,8 @@ urlpatterns = [
     path('ingresar_art_computacionales/', ingresar_art_computacionales, name="ingresar_art_computacionales"),
     path('modificar_art_computacionales/<id>/', modificar_art_computacionales, name='modificar_art_computacionales'),
     path('eliminar_art_computacionales/<id>/', eliminar_art_computacionales, name='eliminar_art_computacionales'),
+    path('api_artcomputacionales/', api_artcomputacionales, name='api_artcomputacionales'),
+
 
     # Articulos Oficina
     path('listar_art_oficina/', listar_art_oficina, name="listar_art_oficina"),

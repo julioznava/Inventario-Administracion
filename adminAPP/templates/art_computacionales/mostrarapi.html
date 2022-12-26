@@ -2,13 +2,8 @@
 <br>
     <div class="card text-center table-responsive">
         <div class="card-body">
-            <h2>Listado de insumos computacionales.</h2>
-            <br>
-                <a href="{% url 'ingresar_art_computacionales' %}" class="btn btn-lg" style="background-color: #d63384; color: aliceblue">Ingresar insumos</a></td>
-                &nbsp;
-                <a href="{% url 'api_artcomputacionales' %}" class="btn btn-primary btn-lg" style="#">API</a></td>
+            <h2>Listado de insumos computacionales JSON.</h2>
             </div>
-
                 <br>
                 <div class="row">
                 <br>
@@ -28,20 +23,14 @@
                                 <th>Descripcion</th>
 
                             </tr>
-                                {% for l in listar %}
+                                {% for s in solicitud %}
                             <tr>
-                                <td>{{ l.Codigo }}</td>
-                                <td>{{ l.Tipo }}</td>
-                                <td>{{ l.Marca }}</td>
-                                <td>{{ l.Fecha_de_adquisicion }}</td>
-                                <td>{{ l.Stock }}</td>
-                                <td>{{ l.Descripcion }}</td>
-                                <td><a class="btn btn-lg btn-success" href="{% url 'modificar_art_computacionales' l.id %}">Modificar</a>
-                                     &nbsp;
-                                    <a class="btn btn-danger btn-lg" href="{% url 'eliminar_art_computacionales' l.id %}">Eliminar</a>
-                                </td>
-
-
+                                <td>{{ s.Codigo }}</td>
+                                <td>{{ s.Tipo }}</td>
+                                <td>{{ s.Marca }}</td>
+                                <td>{{ s.Fecha_de_adquisicion }}</td>
+                                <td>{{ s.Stock }}</td>
+                                <td>{{ s.Descripcion }}</td>
                             </tr>
                                 {% endfor %}
                 </table>
