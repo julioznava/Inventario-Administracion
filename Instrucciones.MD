@@ -45,4 +45,8 @@
 
 <h4>Si desea ejecutar la aplicacion en algun IDE o editor de texto, debe realizar lo mismo._ </h4>
 
+<h1>Para la ejecucion de las API</h1>
 
+ insumos-computacionales: http://inventario-administracion-production.up.railway.app/api/insumos-computacionales
+ insumos-oficina: http://inventario-administracion-production.up.railway.app/api/insumos-oficina
+ registro-vehiculos: http://inventario-administracion-production.up.railway.app/api/registro-vehiculos
