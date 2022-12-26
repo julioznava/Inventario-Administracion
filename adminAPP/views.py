@@ -339,6 +339,23 @@ def api_artcomputacionales(request):
     return render(request, './art_computacionales/mostrarapi.html', context)
 
 
+def api_artoficina(request):
+    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-oficina/').json()
+
+    context = {
+        'solicitud': solicitud,
+    }
+    return render(request, './art_oficina/mostrarapi.html', context)
+
+
+def api_regvehiculos(request):
+    solicitud = requests.get('http://127.0.0.1:8000/api/registro-vehiculos/').json()
+
+    context = {
+        'solicitud': solicitud,
+    }
+    return render(request, './reg_vehiculos/mostrarapi.html', context)
+
 
 
 

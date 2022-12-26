@@ -31,12 +31,17 @@ urlpatterns = [
     path('ingresar_art_oficina/', ingresar_art_oficina, name="ingresar_art_oficina"),
     path('modificar_art_oficina/<id>/', modificar_art_oficina, name='modificar_art_oficina'),
     path('eliminar_art_oficina/<id>/', eliminar_art_oficina, name='eliminar_art_oficina'),
+    path('api_artoficina/', api_artoficina, name='api_artoficina'),
+
 
     # Registro Vehiculo
     path('ingresar_reg_vehiculo/', ingresar_reg_vehiculo, name="ingresar_reg_vehiculo"),
     path('listar_reg_vehiculo/', listar_reg_vehiculo, name="listar_reg_vehiculo"),
     path('modificar_reg_vehiculo/<id>/', modificar_reg_vehiculo, name='modificar_reg_vehiculo'),
     path('eliminar_reg_vehiculo/<id>/', eliminar_reg_vehiculo, name='eliminar_reg_vehiculo'),
+    path('api_regvehiculos/', api_regvehiculos, name='api_regvehiculos'),
+
+
 
     # Usuario
     path('ingresar_usuario/', ingresar_usuario, name="ingresar_usuario"),
