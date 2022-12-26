@@ -48,7 +48,7 @@
 <h1>Para la ejecucion de las API</h1>
 
  insumos-computacionales: http://inventario-administracion-production.up.railway.app/api/insumos-computacionales
- <br/>
+ 
  insumos-oficina: http://inventario-administracion-production.up.railway.app/api/insumos-oficina
  
  registro-vehiculos: http://inventario-administracion-production.up.railway.app/api/registro-vehiculos
