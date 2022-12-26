@@ -1,4 +1,5 @@
 {% include  'base.html' %}
+{% load cloudinary %}
 {% load static %}
 {% block contenido %}
 {% load crispy_forms_tags %}
@@ -7,9 +8,9 @@
         <div class="row justify-content-center py-1">
                 <h1 class="row justify-content-center display-4 py-md-3 shadow pb-4" style="color: white; background-color: #7308EC; border-radius: 0px">Ingreso al sistema</h1>
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body rounded mx-md-5">
                         <br>
-                        <img src="{% static '/img/escaneo-de-huellas-digitales.png' %}" alt="logo-login" class="rounded mx-auto d-block" style="width:260px">
+                        {% cloudinary '/escaneo-de-huellas-digitales_bd2iii.png' width=200 crop='fill' %}
                         <br>
                         <div class="row justify-content-center h-100 py-4">
                             <div class="col-sm-8 col-md-6 col-lg-6 rounded">

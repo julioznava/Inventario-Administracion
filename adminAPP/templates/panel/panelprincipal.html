@@ -1,4 +1,5 @@
 {% include 'Home/../base2.html' %}
+{% load cloudinary %}
 {% load static %}
 <style>
     body {
@@ -15,7 +16,7 @@
       <div class="row mt-6">
         <div class="col-sm-12 col-md-6 col-lg-3 py-lg-5 py-md-3 py-sm-3">
           <div class="card shadow" style="width: 20em; background-color: #EDEDED">
-            <img src="{% static '/img/009-keyboard.png' %}" alt="carrusel1" class="card-img-top" style="width: 180px">
+            {% cloudinary '009-keyboard_uxz1ph.png' width=200 crop='fill' %}
             <div class="card-body">
               <h4>Articulos Computacionales</h4>
               <hr>
@@ -30,7 +31,7 @@
         </div>
             <div class="col-sm-12 col-md-6 col-lg-3 py-lg-5 py-md-3 py-sm-3">
               <div class="card shadow" style="width: 20em; background-color: #EDEDED; color: black">
-                <img src="{% static '/img/025-desk.png' %}" alt="carrusel1" class="card-img-top" style="width: 210px">
+                {% cloudinary '025-desk_vaoris.png' width=200 crop='fill' %}
                 <div class="card-body">
                   <h4>Articulos de oficina</h4>
                   <hr>
@@ -43,7 +44,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 py-lg-5 py-md-3 py-sm-3">
               <div class="card shadow" style="width: 20em; background-color: #EDEDED; color: black">
-                <img src="{% static '/img/025-truck.png' %}" alt="carrusel1" class="card-img-top" style="width: 210px">
+                 {% cloudinary '025-truck_ztzpci.png' width=200 crop='fill' %}
                 <div class="card-body">
                   <h4>Ingresar Vehiculos</h4>
                   <hr>
@@ -57,7 +58,7 @@
 
         <div class="col-sm-12 col-md-6 col-lg-3 py-lg-5 py-md-3 py-sm-3">
           <div class="card shadow" style="width: 20em; background-color: #EDEDED; color: black">
-            <img src="{% static '/img/032-fingerprint.svg' %}" alt="carrusel1" class="card-img-top" style="width: 210px">
+              {% cloudinary '002-user_j3lzh5.png' width=200 crop='fill' %}
             <div class="card-body">
               <h4>Administrador</h4>
               <hr>

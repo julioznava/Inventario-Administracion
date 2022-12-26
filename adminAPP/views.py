@@ -329,7 +329,7 @@ class RegistroVehiculoViewset(viewsets.ModelViewSet):
 #MOSTRAR DATOS API
 
 def api_artcomputacionales(request):
-    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-computacionales/').json()
+    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/api_artcomputacionales/').json()
 
     context = {
         'solicitud': solicitud,
@@ -340,7 +340,7 @@ def api_artcomputacionales(request):
 
 
 def api_artoficina(request):
-    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-oficina/').json()
+    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/api_artoficina/').json()
 
     context = {
         'solicitud': solicitud,
@@ -349,7 +349,7 @@ def api_artoficina(request):
 
 
 def api_regvehiculos(request):
-    solicitud = requests.get('http://127.0.0.1:8000/api/registro-vehiculos/').json()
+    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/listar_reg_vehiculo/').json()
 
     context = {
         'solicitud': solicitud,
@@ -360,7 +360,8 @@ def api_regvehiculos(request):
 
 
 
-
+def apisite(request):
+    return render(request, 'https://inventario-administracion-production.up.railway.app/api/')
 
 
 
