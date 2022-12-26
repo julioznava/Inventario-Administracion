@@ -2,8 +2,9 @@
 <br>
     <div class="card text-center table-responsive">
         <div class="card-body">
-            <h2>Listado de insumos computacionales JSON.</h2>
+            <h2>Listado de insumos computacionales API.</h2>
             </div>
+            <a href="{% url 'api' %}">JSON</a>
                 <br>
                 <div class="row">
                 <br>
@@ -33,6 +34,10 @@
                                 <td>{{ s.Descripcion }}</td>
                             </tr>
                                 {% endfor %}
+
+                            {% for s in solicitud %}
+                            {% endfor %}
+
                 </table>
                 </div>
             </div>

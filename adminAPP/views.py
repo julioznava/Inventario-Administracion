@@ -332,7 +332,9 @@ def api_artcomputacionales(request):
     solicitud = requests.get('http://127.0.0.1:8000/api/insumos-computacionales/').json()
 
     context = {
-        'solicitud': solicitud
+        'solicitud': solicitud,
+
+
     }
     return render(request, './art_computacionales/mostrarapi.html', context)
 

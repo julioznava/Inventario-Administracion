@@ -46,5 +46,6 @@ urlpatterns = [
 
     # PATH para la API
 
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+
 ]
