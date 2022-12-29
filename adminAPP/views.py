@@ -329,20 +329,20 @@ class RegistroVehiculoViewset(viewsets.ModelViewSet):
 #MOSTRAR DATOS API
 
 def api_artcomputacionales(request):
-    # solicitud = requests.get('http://127.0.0.1:8000/api/insumos-computacionales/').json() # --> Local
-    solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/insumos-computacionales/').json() # --> Railway
+    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-computacionales/').json() # --> Local
+    # solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/insumos-computacionales/').json() # --> Railway
     context = {
         'solicitud': solicitud,
     }
     return render(request, './art_computacionales/mostrarapi.html', context)
 
 def json_artcomputacionales(request):
-    # return redirect(to='http://127.0.0.1:8000/api/insumos-computacionales/?format=json') # --> Local
-    return redirect(to='https://inventario-administracion-production.up.railway.app/api/insumos-computacionales/?format=json')  # --> Railway
+    return redirect(to='http://127.0.0.1:8000/api/insumos-computacionales/?format=json') # --> Local
+    # return redirect(to='https://inventario-administracion-production.up.railway.app/api/insumos-computacionales/?format=json')  # --> Railway
 
 def api_artoficina(request):
-    # solicitud = requests.get('http://127.0.0.1:8000/api/insumos-oficina/').json() # --> Local
-    solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/insumos-oficina/').json() # --> Railway
+    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-oficina/').json() # --> Local
+    # solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/insumos-oficina/').json() # --> Railway
 
 
     context = {
@@ -351,12 +351,12 @@ def api_artoficina(request):
     return render(request, './art_oficina/mostrarapi.html', context)
 
 def json_artoficina(request):
-    # return redirect(to='http://127.0.0.1:8000/api/insumos-oficina/?format=json') # --> Local
-    return redirect(to='https://inventario-administracion-production.up.railway.app/api/insumos-oficina/?format=json') # --> Railway
+    return redirect(to='http://127.0.0.1:8000/api/insumos-oficina/?format=json') # --> Local
+    # return redirect(to='https://inventario-administracion-production.up.railway.app/api/insumos-oficina/?format=json') # --> Railway
 
 def api_regvehiculos(request):
-    # solicitud = requests.get('http://127.0.0.1:8000/api/registro-vehiculos/').json() # --> Local
-    solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/registro-vehiculos/').json() # --> Railway
+    solicitud = requests.get('http://127.0.0.1:8000/api/registro-vehiculos/').json() # --> Local
+    # solicitud = requests.get('http://inventario-administracion-production.up.railway.app/api/registro-vehiculos/').json() # --> Railway
 
     context = {
         'solicitud': solicitud,
@@ -365,8 +365,8 @@ def api_regvehiculos(request):
     return render(request, './reg_vehiculos/mostrarapi.html', context)
 
 def json_regvehiculos(request):
-    # return redirect(to='http://127.0.0.1:8000/api/registro-vehiculos/?format=json') # --> Local
-    return redirect(to='https://inventario-administracion-production.up.railway.app/api/registro-vehiculos/?format=json') # --> Railway
+    return redirect(to='http://127.0.0.1:8000/api/registro-vehiculos/?format=json') # --> Local
+    # return redirect(to='https://inventario-administracion-production.up.railway.app/api/registro-vehiculos/?format=json') # --> Railway
 
 
 
