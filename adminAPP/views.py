@@ -329,41 +329,39 @@ class RegistroVehiculoViewset(viewsets.ModelViewSet):
 #MOSTRAR DATOS API
 
 def api_artcomputacionales(request):
-    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/api_artcomputacionales/').json()
+    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-computacionales/').json()
 
     context = {
         'solicitud': solicitud,
-
-
     }
     return render(request, './art_computacionales/mostrarapi.html', context)
 
+def json_artcomputacionales(request):
+    return redirect(to='http://127.0.0.1:8000/api/insumos-computacionales/?format=json')
 
 def api_artoficina(request):
-    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/api_artoficina/').json()
+    solicitud = requests.get('http://127.0.0.1:8000/api/insumos-oficina/').json()
 
     context = {
         'solicitud': solicitud,
     }
     return render(request, './art_oficina/mostrarapi.html', context)
 
+def json_artoficina(request):
+    return redirect(to='http://127.0.0.1:8000/api/insumos-oficina/?format=json')
+
 
 def api_regvehiculos(request):
-    solicitud = requests.get('https://inventario-administracion-production.up.railway.app/listar_reg_vehiculo/').json()
+    solicitud = requests.get('http://127.0.0.1:8000/api/registro-vehiculos/').json()
 
     context = {
         'solicitud': solicitud,
     }
+
     return render(request, './reg_vehiculos/mostrarapi.html', context)
 
-
-# def apisite(request):
-#     return render(request, 'https://inventario-administracion-production.up.railway.app/api/')
-#
-#
-#
-
-
+def json_regvehiculos(request):
+    return redirect(to='http://127.0.0.1:8000/api/registro-vehiculos/?format=json')
 
 
 

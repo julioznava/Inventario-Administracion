@@ -24,7 +24,7 @@ urlpatterns = [
     path('modificar_art_computacionales/<id>/', modificar_art_computacionales, name='modificar_art_computacionales'),
     path('eliminar_art_computacionales/<id>/', eliminar_art_computacionales, name='eliminar_art_computacionales'),
     path('api_artcomputacionales/', api_artcomputacionales, name='api_artcomputacionales'),
-
+    path('json_artcomputacionales/', json_artcomputacionales, name='json_artcomputacionales'),
 
     # Articulos Oficina
     path('listar_art_oficina/', listar_art_oficina, name="listar_art_oficina"),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('modificar_art_oficina/<id>/', modificar_art_oficina, name='modificar_art_oficina'),
     path('eliminar_art_oficina/<id>/', eliminar_art_oficina, name='eliminar_art_oficina'),
     path('api_artoficina/', api_artoficina, name='api_artoficina'),
+    path('json_artoficina/', json_artoficina, name='json_artoficina'),
 
 
     # Registro Vehiculo
@@ -40,7 +41,7 @@ urlpatterns = [
     path('modificar_reg_vehiculo/<id>/', modificar_reg_vehiculo, name='modificar_reg_vehiculo'),
     path('eliminar_reg_vehiculo/<id>/', eliminar_reg_vehiculo, name='eliminar_reg_vehiculo'),
     path('api_regvehiculos/', api_regvehiculos, name='api_regvehiculos'),
-
+    path('json_regvehiculos/', json_regvehiculos, name='json_regvehiculos'),
 
 
     # Usuario
@@ -51,5 +52,7 @@ urlpatterns = [
 
     # PATH para la API
 
+
     path('api/', include(router.urls)),
+
 ]
